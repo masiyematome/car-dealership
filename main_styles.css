@@ -10,7 +10,7 @@ body{
 }
 
 header{
-    background-color : #3d5af1;
+    background-color : #278ea5;
     padding : 10px 15px;
 }
 
@@ -38,5 +38,39 @@ main h2::after{
     transform: translateX(-50%);
     height : 4px;
     width : 4%;
-    background-color : #3d5af1;
+    background-color : #278ea5;
+}
+
+.buttons-container{
+    position : relative;
+    top : 100px;
+    width : 40%;
+    margin : auto;
+    display : flex;
+    justify-content: space-evenly;
+}
+
+.buttons-container button{
+    padding : 5px;
+    font-size : 1rem;
+    outline : none;
+    border-left: 2px solid #278ea5;
+    border-top : 2px solid #278ea5;
+    border-right: 2px solid #0f3c46;
+    border-bottom : 2px solid #0f3c46;
+    border-radius : 8px;
+    cursor : pointer;
+    color : #278ea5;
+    transition : all ease 0.5s;
+    font-weight : lighter;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.buttons-container button:hover{
+    background-color : #278ea5;
+    color : white;
 }
