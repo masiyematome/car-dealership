@@ -86,4 +86,5 @@ main #intro-text::after{
     width : 90%;
     margin : auto;
     border : 2px solid teal;
+    padding : 25px 40px;
 }
