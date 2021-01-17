@@ -87,4 +87,28 @@ main #intro-text::after{
     margin : auto;
     border : 2px solid teal;
     padding : 25px 40px;
+    display : grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
+
+.cars-display > div {
+    display : flex;
+    justify-content: space-between;
+}
+
+.cars-display > div > div {
+    display : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    padding : 0px 0px 120px 20px;
+}
+
+.cars-display > div > div > div{
+    display : flex;
+}
+
+.cars-display > div > div > div h3{
+    font-size : 1rem;
+    border : 1px solid teal;
+
 }
