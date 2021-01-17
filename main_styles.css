@@ -85,30 +85,43 @@ main #intro-text::after{
     top : 130px;
     width : 90%;
     margin : auto;
-    border : 2px solid teal;
     padding : 25px 40px;
     display : grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-gap : 20px;
+    grid-template-columns: repeat(2,1fr);
 }
 
-.cars-display > div {
-    display : flex;
-    justify-content: space-between;
-}
-
-.cars-display > div > div {
-    display : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    padding : 0px 0px 120px 20px;
-}
-
-.cars-display > div > div > div{
+.car-holder {
+    padding : 15px;
     display : flex;
 }
 
-.cars-display > div > div > div h3{
+.car-holder img{
+    width : 40%;
+    height: auto;
+    border-radius : 8px;
+    border : 4px solid var(--first-color);
+}
+
+.car-info{
+    padding : 0px 15px 0px;
+}
+
+.car-info h3{
     font-size : 1rem;
-    border : 1px solid teal;
+}
 
+.car-info h3:nth-of-type(1){
+    color : rgb(90, 90, 90);
+}
+
+.car-info h3:nth-of-type(2){
+    color : var(--first-color)
+}
+
+.car-info p{
+    font-size : 14px;
+    font-weight: lighter;
+    padding : 15px 0px 0px;
+    color : var(--first-color);
 }
