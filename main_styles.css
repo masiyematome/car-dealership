@@ -166,7 +166,7 @@ main #intro-text::after{
 
 footer{
     background-color : var(--first-color);
-    padding : 20px 35px;
+    padding : 40px 35px 20px;
 }
 
 footer h3{
@@ -188,3 +188,36 @@ footer h3::after{
     background-color : white;
     bottom : 0%;
 }
+
+footer .below-intro-text{
+    text-align: center;
+    color : white;
+    padding : 15px 0px;
+    font-size : 14px;
+}
+
+.communication-channels {
+    padding : 50px 0px;
+}
+
+footer span{
+    display: block;
+    padding : 5px;
+}
+
+footer span i,footer span p{
+    display: inline-block;
+    color : snow;
+}
+
+footer i{
+    font-size : 1.5rem;
+    padding : 8px;
+}
+
+footer p{
+    font-size: 14px;
+}
+
+
+
