@@ -10,13 +10,17 @@
     --second-color :  #0f3c46;
 }
 
-body{
+html,body{
     background-color : rgb(241, 241, 241);
+    scroll-behavior: smooth;
 }
 
 header{
     background-color : var(--first-color);
     padding : 10px 15px;
+    position : sticky;
+    top : 0;
+    z-index : 1;
 }
 
 header h1{
@@ -130,3 +134,17 @@ main #intro-text::after{
     padding : 15px 0px 0px;
     color : var(--first-color);
 }
+
+.scroll-to-top{
+    font-size: 3rem;
+    padding : 8px 15px;
+    color : var(--second-color);
+    cursor: pointer;
+    outline : none;
+    border : none;
+    position : fixed;
+    top : 80%;
+    right : 0%;
+}
+
+
