@@ -94,11 +94,12 @@ main #intro-text::after{
 .car-holder {
     padding : 15px;
     display : flex;
+    border-bottom: 2px dotted var(--second-color);
 }
 
 .car-holder img{
     width : 40%;
-    height: auto;
+    height: 80%;
     border-radius : 8px;
     border : 4px solid var(--first-color);
 }
