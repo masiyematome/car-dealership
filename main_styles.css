@@ -197,12 +197,12 @@ footer .below-intro-text{
     display : flex;
 }
 
-.communication-channels > div:nth-of-type(1) , .communication-channels > div:nth-of-type(2) {
-    flex-basis : 28%;
+.communication-channels .contact-links{
+    flex-basis: 30%;
 }
 
-.communication-channels > div:nth-of-type(3){
-    flex-basis: 40%;
+.communication-channels .map{
+    flex-basis: 65%;
 }
 
 footer span{
@@ -222,44 +222,6 @@ footer i{
 
 footer p{
     font-size: 14px;
-}
-
-.contact-form{
-    padding : 0px 25px;
-}
-
-.contact-form form{
-    display: flex;
-    flex-direction: column;
-}
-
-form input,form button,form textarea{
-    padding : 5px;
-    font-size : 1rem;
-    margin-top : 8px;
-    outline : none;
-    border : none;
-    border-radius: 5px;
-}
-
-form input,form textarea{
-    color : gray;
-    width : 100%;
-}
-
-form button{
-    align-self: center;
-    width : 60%;
-    color : white;
-    background-color: transparent;
-    border : 2px solid white;
-    cursor: pointer;
-    transition: all ease 0.5s;
-    margin-top : 20px;
-}
-
-form button:hover{
-    transform: scale(1.05);
 }
 
 .map{
