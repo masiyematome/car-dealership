@@ -143,7 +143,7 @@ main #intro-text::after{
     outline : none;
     border : none;
     position : fixed;
-    top : 80%;
+    top : 85%;
     right : 0%;
     animation : blinkAnimation 2s;
     animation-iteration-count: infinite;
@@ -198,6 +198,7 @@ footer .below-intro-text{
 
 .communication-channels {
     padding : 50px 0px;
+    display : flex;
 }
 
 footer span{
@@ -217,6 +218,47 @@ footer i{
 
 footer p{
     font-size: 14px;
+}
+
+.contact-form{
+    padding : 0px 45px;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input,form button,form textarea{
+    padding : 5px;
+    font-size : 1rem;
+    margin-top : 8px;
+    outline : none;
+    border : none;
+    border-radius: 5px;
+}
+
+form input,form textarea{
+    color : gray
+}
+
+form button{
+    align-self: center;
+    width : 60%;
+    color : white;
+    background-color: transparent;
+    border : 2px solid white;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    margin-top : 20px;
+}
+
+form button:hover{
+    transform: scale(1.05);
+}
+
+.map{
+    padding : 0px 25px;
 }
 
 
