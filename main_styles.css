@@ -93,7 +93,7 @@ main #intro-text::after{
 
 .car-holder {
     padding : 15px;
-    display : none;
+    display : flex;
     border-bottom: 2px dotted var(--second-color);
 }
 
