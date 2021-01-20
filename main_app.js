@@ -14,27 +14,57 @@ function showCars(ev){
 
     carHolders.forEach(function(holder){
         if(clickedButton.className == "all-cars-button"){
-            console.log("I am going to show you all cars");
-        }
-
-        else if(clickedButton.className == "hatchbacks-button"){
-            console.log("I am going to show you all hatchback cars");
+            holder.style.display = "flex";
         }
 
         else if(clickedButton.className == "sedans-button"){
-            console.log("I am going to show you all sedan cars");
+            if(holder.classList[1] == "sedan"){
+                holder.style.display = "flex";
+            }
+
+            else{
+                holder.style.display = "none";
+            }
+        }
+
+        else if(clickedButton.className == "hatchbacks-button"){
+            if(holder.classList[1] == "hatchback"){
+                holder.style.display = "flex";
+            }
+
+            else{
+                holder.style.display = "none";
+            }
         }
 
         else if(clickedButton.className == "coupes-button"){
-            console.log("I am going to show you all coupes cars");
+            if(holder.classList[1] == "coupe"){
+                holder.style.display = "flex";
+            }
+
+            else{
+                holder.style.display = "none";
+            }
         }
 
         else if(clickedButton.className == "suvs-button"){
-            console.log("I am going to show you all suvs cars");
+            if(holder.classList[1] == "suv"){
+                holder.style.display = "flex";
+            }
+
+            else{
+                holder.style.display = "none";
+            }
         }
 
         else if(clickedButton.className == "bakkies-button"){
-            console.log("I am going to show you all bakkies cars");
+            if(holder.classList[1] == "bakkie"){
+                holder.style.display = "flex";
+            }
+
+            else{
+                holder.style.display = "none";
+            }
         }
     })
     
