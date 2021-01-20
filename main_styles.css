@@ -95,6 +95,17 @@ main #intro-text::after{
     padding : 15px;
     display : flex;
     border-bottom: 2px dotted var(--second-color);
+    animation : carHolderAnimation 0.8s;
+}
+
+@keyframes carHolderAnimation{
+    0%{
+        margin-top : -50px;
+    }
+
+    100%{
+        margin-top : 0px;
+    }
 }
 
 .car-holder img{
