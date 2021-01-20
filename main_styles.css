@@ -163,6 +163,7 @@ main #intro-text::after{
 footer{
     background-color : var(--first-color);
     padding : 40px 35px 20px;
+    /* position: relative; */
 }
 
 footer h3{
@@ -230,6 +231,7 @@ footer p{
 
 .map iframe{
     width : 100%;
+    border-radius : 8px;
 }
 
 
