@@ -1,6 +1,7 @@
 //Selectors 
 
 const buttonsContainer = document.querySelector(".buttons-container");
+const buttons = document.querySelectorAll("button");
 const carHolders = document.querySelectorAll(".car-holder");
 
 //Event listeners
@@ -10,6 +11,7 @@ buttonsContainer.addEventListener("click", showCars);
 //Functions
 
 function showCars(ev) {
+
     const clickedButton = ev.target;
 
     carHolders.forEach(function (holder) {
@@ -21,7 +23,7 @@ function showCars(ev) {
                 break;
 
             case "sedans-button":
-                
+
                 if (holder.classList[1] == "sedan") {
                     holder.style.display = "flex"; 
                 }

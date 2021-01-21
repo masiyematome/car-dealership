@@ -77,12 +77,7 @@ main #intro-text::after{
     user-select: none;
 }
 
-.buttons-container button:hover{
-    background-color : var(--first-color);
-    color : white;
-}
-
-.buttons-container button:focus{
+.buttons-container button.active,.buttons-container button:hover{
     background-color : var(--first-color);
     color : white;
 }
@@ -100,16 +95,24 @@ main #intro-text::after{
     padding : 15px;
     display : flex;
     border-bottom: 2px dotted var(--second-color);
-    animation : carHolderAnimation 0.8s;
+    animation : carHolderAnimation 1s;
 }
 
 @keyframes carHolderAnimation{
     0%{
-        margin-top : -50px;
+        opacity: 0;
+    }
+
+    50%{
+        opacity : 0.5;
+    }
+
+    75%{
+        opacity : 0.75;
     }
 
     100%{
-        margin-top : 0px;
+        opacity: 1;
     }
 }
 
