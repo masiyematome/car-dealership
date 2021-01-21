@@ -82,6 +82,11 @@ main #intro-text::after{
     color : white;
 }
 
+.buttons-container button:focus{
+    background-color : var(--first-color);
+    color : white;
+}
+
 .cars-display{
     width : 90%;
     margin : auto;

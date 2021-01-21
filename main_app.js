@@ -14,15 +14,16 @@ function showCars(ev) {
 
     carHolders.forEach(function (holder) {
 
-        switch (clickedButton.className) {
+        switch (clickedButton.classList[0]) {
             
             case "all-cars-button":
                 holder.style.display = "flex";
                 break;
 
             case "sedans-button":
+                
                 if (holder.classList[1] == "sedan") {
-                    holder.style.display = "flex";
+                    holder.style.display = "flex"; 
                 }
 
                 else {
