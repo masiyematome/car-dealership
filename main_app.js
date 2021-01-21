@@ -14,6 +14,13 @@ function showCars(ev) {
 
     const clickedButton = ev.target;
 
+    buttons.forEach(button => {
+        button.addEventListener("click", function(){
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        })
+    })
+
     carHolders.forEach(function (holder) {
 
         switch (clickedButton.classList[0]) {
