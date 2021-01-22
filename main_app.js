@@ -15,14 +15,23 @@ buttonsContainer.addEventListener("click", showCars);
 //Functions
 
 smallImages.forEach(smallImage => {
-    smallImage.addEventListener("click", () => {
+    smallImage.addEventListener("click",() =>{
         modal.classList.add("open");
+        fullImage.classList.add("open");
+
+        const theFullImage = smallImage.getAttribute("src");
+        fullImage.src = theFullImage;
+
+        const captionText = smallImage.getAttribute("alt");
+        imageCaption.innerText = captionText;
+
     })
 })
 
-modal.addEventListener("click",(ev) => {
-    if(ev.target.classList.contains("modal")){
+modal.addEventListener("click",(event) =>{
+    if(event.target.classList.contains("modal")){
         modal.classList.remove("open");
+        fullImage.classList.remove("open");
     }
 })
 
