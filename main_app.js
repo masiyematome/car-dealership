@@ -3,12 +3,28 @@
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttons = document.querySelectorAll("button");
 const carHolders = document.querySelectorAll(".car-holder");
+const modal = document.querySelector(".modal");
+const smallImages = document.querySelectorAll(".cars-display img");
+const fullImage = document.querySelector(".full-image");
+const imageCaption = document.querySelector(".image-caption");
 
 //Event listeners
 
 buttonsContainer.addEventListener("click", showCars);
 
 //Functions
+
+smallImages.forEach(smallImage => {
+    smallImage.addEventListener("click", () => {
+        modal.classList.add("open");
+    })
+})
+
+modal.addEventListener("click",(ev) => {
+    if(ev.target.classList.contains("modal")){
+        modal.classList.remove("open");
+    }
+})
 
 function showCars(ev) {
 
