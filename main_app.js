@@ -8,6 +8,7 @@ const smallImages = document.querySelectorAll(".cars-display img");
 const fullImage = document.querySelector(".full-image");
 const imageCaption = document.querySelector(".image-caption");
 const fullImageContainer = document.querySelector(".full-image-container");
+const closeButton = document.querySelector(".close-button");
 
 //Event listeners
 
@@ -32,9 +33,8 @@ buttonsContainer.addEventListener("click", showCars);
     })
     
     modal.addEventListener("click",(event) =>{
-        if(event.target.classList.contains("modal")){
+        if(event.target.classList.contains("modal") || event.target.classList.contains("close-button")){
             modal.classList.remove("open");
-            // fullImage.classList.remove("open");
             fullImageContainer.classList.remove("open");
             
         }

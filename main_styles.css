@@ -291,6 +291,11 @@ footer p{
     left : 100%;
     bottom: 97%;
     transform: translate(-100%,-97%);
+    transition: all 0.5s ease;
+}
+
+.full-image-container .fas:hover{
+    color : rgb(160, 137, 137);
 }
 
 .full-image-container.open{
