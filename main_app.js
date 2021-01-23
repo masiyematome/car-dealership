@@ -20,7 +20,6 @@ buttonsContainer.addEventListener("click", showCars);
     smallImages.forEach(smallImage => {
         smallImage.addEventListener("click",() =>{
             modal.classList.add("open");
-            // fullImage.classList.add("open");
             fullImageContainer.classList.add("open");
     
             const theFullImage = smallImage.getAttribute("src");

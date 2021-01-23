@@ -269,7 +269,8 @@ footer p{
 }
 
 .full-image-container{
-    border : 2px solid white;
+    border : 4px solid var(--first-color);
+    border-radius : 8px;
     opacity : 0;
     pointer-events: none;
     width : 50%;
@@ -277,9 +278,19 @@ footer p{
     top : 50%;
     left : 50%;
     width : 50%;
-    height : 77%;
+    height : 76%;
     transform: translate(-50%,-50%) scale(0.5);
     transition: all 0.5s ease;
+    /* overflow: hidden; */
+}
+
+.full-image-container .fas{
+    position : absolute;
+    font-size: 2rem;
+    color : snow;
+    left : 100%;
+    bottom: 97%;
+    transform: translate(-100%,-97%);
 }
 
 .full-image-container.open{
@@ -295,6 +306,8 @@ footer p{
 
 .full-image{
     width : 100%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .modal p{
