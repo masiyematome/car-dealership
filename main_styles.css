@@ -66,6 +66,14 @@ header .search-bar{
     color : white;
 }
 
+main .error-text{
+    text-align : center;
+    padding : 15px;
+    color : indianred;
+    font-size : 13px;
+    display : none;
+}
+
 main #intro-text{
   text-align : center;  
   padding : 25px 0px 6px;

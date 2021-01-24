@@ -7,7 +7,7 @@ const buttons = document.querySelectorAll("button");
 const carHolders = document.querySelectorAll(".car-holder");
 const carNamesText = document.querySelectorAll(".car-name");
 
-/**Selctors for the modal that shows the full image of the displayed cars and all it's elements **/
+/**Selectors for the modal that shows the full image of the displayed cars and all it's elements **/
 const modal = document.querySelector(".modal");
 const smallImages = document.querySelectorAll(".cars-display img");
 const fullImage = document.querySelector(".full-image");
@@ -18,35 +18,38 @@ const closeButton = document.querySelector(".close-button");
 /**Selectors of the search bar **/
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
+const errorText = document.querySelector(".error-text");
 
 //Event listeners
 
 buttonsContainer.addEventListener("click", showCars);
-searchButton.addEventListener("click",findSearched);
+searchButton.addEventListener("click", findSearched);
 
 //Functions
 
 /*A function that finds a searched item*/
 
-function findSearched(e){
+function findSearched(e) {
 
-    if(searchInput.value == ""){
-        alert("You did not put anything in the search box");
+    if (searchInput.value == "") {
+        errorText.innerText = "Your search box is empty.Please input something";
+        errorText.style.display = "block";
     }
 
-    else{
+    else {
         carNamesText.forEach(carName => {
 
             const carNameParent = carName.parentElement;
-                const carNameGrandParent = carNameParent.parentElement;
+            const carNameGrandParent = carNameParent.parentElement;
 
-            if(carName.innerText.includes(searchInput.value)){
-                
+            if (carName.innerText.includes(searchInput.value)) {
+
                 carNameGrandParent.style.display = "flex";
+                errorText.style.display = "none";
 
             }
 
-            else{
+            else {
                 carNameGrandParent.style.display = "none";
             }
 
@@ -57,27 +60,27 @@ function findSearched(e){
 
 /*A function that views the full sized images of the displayed images*/
 
-(function(){
-    
+(function () {
+
     smallImages.forEach(smallImage => {
-        smallImage.addEventListener("click",() =>{
+        smallImage.addEventListener("click", () => {
             modal.classList.add("open");
             fullImageContainer.classList.add("open");
-    
+
             const theFullImage = smallImage.getAttribute("src");
             fullImage.src = theFullImage;
-    
+
             const captionText = smallImage.getAttribute("alt");
             imageCaption.innerText = captionText;
-    
+
         })
     })
-    
-    modal.addEventListener("click",(event) =>{
-        if(event.target.classList.contains("modal") || event.target.classList.contains("close-button")){
+
+    modal.addEventListener("click", (event) => {
+        if (event.target.classList.contains("modal") || event.target.classList.contains("close-button")) {
             modal.classList.remove("open");
             fullImageContainer.classList.remove("open");
-            
+
         }
     })
 
@@ -90,7 +93,7 @@ function showCars(ev) {
     const clickedButton = ev.target;
 
     buttons.forEach(button => {
-        button.addEventListener("click", function(){
+        button.addEventListener("click", function () {
             buttons.forEach(btn => btn.classList.remove("active"));
             this.classList.add("active");
         })
@@ -99,7 +102,7 @@ function showCars(ev) {
     carHolders.forEach(function (holder) {
 
         switch (clickedButton.classList[0]) {
-            
+
             case "all-cars-button":
                 holder.style.display = "flex";
                 break;
@@ -107,7 +110,7 @@ function showCars(ev) {
             case "sedans-button":
 
                 if (holder.classList[1] == "sedan") {
-                    holder.style.display = "flex"; 
+                    holder.style.display = "flex";
                 }
 
                 else {
