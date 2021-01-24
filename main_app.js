@@ -5,7 +5,7 @@
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttons = document.querySelectorAll("button");
 const carHolders = document.querySelectorAll(".car-holder");
-const 
+const carNamesText = document.querySelectorAll(".car-name");
 
 /**Selctors for the modal that shows the full image of the displayed cars and all it's elements **/
 const modal = document.querySelector(".modal");
@@ -19,7 +19,6 @@ const closeButton = document.querySelector(".close-button");
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
 
-
 //Event listeners
 
 buttonsContainer.addEventListener("click", showCars);
@@ -31,12 +30,27 @@ searchButton.addEventListener("click",findSearched);
 
 function findSearched(e){
 
-    if(searchInput.value === " "){
-        alert("Please you have to input something");
+    if(searchInput.value == ""){
+        alert("You did not put anything in the search box");
     }
 
     else{
-        
+        carNamesText.forEach(carName => {
+
+            const carNameParent = carName.parentElement;
+                const carNameGrandParent = carNameParent.parentElement;
+
+            if(carName.innerText.includes(searchInput.value)){
+                
+                carNameGrandParent.style.display = "flex";
+
+            }
+
+            else{
+                carNameGrandParent.style.display = "none";
+            }
+
+        })
     }
 
 }
