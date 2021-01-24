@@ -17,16 +17,49 @@ html,body{
 
 header{
     background-color : var(--first-color);
-    padding : 10px 15px;
+    padding : 10px 35px 10px 15px;
     position : sticky;
     top : 0;
     z-index : 1;
+    display : flex;
+    justify-content: space-between;
 }
 
 header h1{
     color : white;
     font-family: 'Lobster Two', cursive;
     font-weight: lighter;
+}
+
+header .search-bar{
+    display:flex;
+    align-items: center;
+}
+
+.search-bar input,.search-bar button{
+    outline : none;
+    border : none;
+    padding : 5px 15px;
+}
+
+.search-bar input{
+    color : gray;
+    caret-color: gray;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.search-bar button{
+    background-color: white;
+    color : var(--first-color);
+    border-radius: 0px 8px 8px 0px;
+    border-left: 1px solid var(--first-color);
+    cursor: pointer;
+    transition : all ease 0.5s;
+}
+
+.search-bar button:hover{
+    background-color: transparent;
+    color : white;
 }
 
 main #intro-text{
