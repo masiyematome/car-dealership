@@ -29,11 +29,13 @@ header h1{
     color : white;
     font-family: 'Lobster Two', cursive;
     font-weight: lighter;
+    flex-basis: 70%;
 }
 
 header .search-bar{
     display:flex;
     align-items: center;
+    flex-basis: 30%;
 }
 
 .search-bar input,.search-bar button{
@@ -46,6 +48,8 @@ header .search-bar{
     color : gray;
     caret-color: gray;
     border-radius: 8px 0px 0px 8px;
+    width : 90%;
+    text-align:center;
 }
 
 .search-bar button{

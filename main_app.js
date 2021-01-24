@@ -1,8 +1,12 @@
 //Selectors 
 
+
+/**Selectors for filter buttons and cards that display the cars **/
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttons = document.querySelectorAll("button");
 const carHolders = document.querySelectorAll(".car-holder");
+
+/**Selctors for the modal that shows the full image of the displayed cars and all it's elements **/
 const modal = document.querySelector(".modal");
 const smallImages = document.querySelectorAll(".cars-display img");
 const fullImage = document.querySelector(".full-image");
@@ -10,11 +14,33 @@ const imageCaption = document.querySelector(".image-caption");
 const fullImageContainer = document.querySelector(".full-image-container");
 const closeButton = document.querySelector(".close-button");
 
+/**Selectors of the search bar **/
+const searchInput = document.querySelector(".search-input");
+const searchButton = document.querySelector(".search-button");
+
+
 //Event listeners
 
 buttonsContainer.addEventListener("click", showCars);
+searchButton.addEventListener("click",findSearched);
 
 //Functions
+
+/*A function that finds a searched item*/
+
+function findSearched(e){
+
+    if(searchInput.value === " "){
+        alert("Please you have to input something");
+    }
+
+    else{
+        alert(searchInput.value);
+    }
+
+}
+
+/*A function that views the full sized images of the displayed images*/
 
 (function(){
     
@@ -41,6 +67,8 @@ buttonsContainer.addEventListener("click", showCars);
     })
 
 })();
+
+/*A function that shows the cars based on the filter button clicked*/
 
 function showCars(ev) {
 
