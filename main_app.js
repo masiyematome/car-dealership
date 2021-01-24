@@ -5,6 +5,7 @@
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttons = document.querySelectorAll("button");
 const carHolders = document.querySelectorAll(".car-holder");
+const 
 
 /**Selctors for the modal that shows the full image of the displayed cars and all it's elements **/
 const modal = document.querySelector(".modal");
@@ -35,79 +36,7 @@ function findSearched(e){
     }
 
     else{
-        carHolders.forEach(carHolder => {
-            if(searchInput.value == "bmw" || searchInput.value == "BMW" || searchInput.value == "Bmw"){
-                if(carHolder.classList.contains("bmw-g20") || carHolder.classList.contains("blue-x5")){
-                    carHolder.style.display = "flex";
-                }
-
-                else{
-                    carHolder.style.display = "none";
-                }
-            }
-
-            if(searchInput.value == "audi" || searchInput.value == "AUDI" || searchInput.value == "Audi"){
-                if(carHolder.classList.contains("audi-rs5") || carHolder.classList.contains("audi-rs3")){
-                    carHolder.style.display = "flex";
-                }
-
-                else{
-                    carHolder.style.display = "none";
-                }
-            }
-
-            if(searchInput.value == "toyota" || searchInput.value == "TOYOTA" || searchInput.value == "Toyota"){
-                if(carHolder.classList.contains("white-hilux")){
-                    carHolder.style.display = "flex";
-                }
-
-                else{
-                    carHolder.style.display = "none";
-                }
-            }
-
-            if(searchInput.value == "toyota" || searchInput.value == "TOYOTA" || searchInput.value == "Toyota"){
-                if(carHolder.classList.contains("white-hilux")){
-                    carHolder.style.display = "flex";
-                }
-
-                else{
-                    carHolder.style.display = "none";
-                }
-            }
-
-            if(searchInput.value == "mercedes-benz" || searchInput.value == "Mercedes-benz" || searchInput.value == "MERCEDES-BENZ" || searchInput.value == "Mercedes-Benz"){
-                if(carHolder.classList.contains("white-c63s") || carHolder.classList.contains("white-s63")){
-                    carHolder.style.display = "flex";
-                }
-
-                else{
-                    carHolder.style.display = "none";
-                }
-            }
-
-            if(searchInput.value == "volkswagen" || searchInput.value == "Volkswagen" || searchInput.value == "VolksWagen" || searchInput.value == "VOLKSWAGEN"){
-                if(carHolder.classList.contains("black-golf")){
-                    carHolder.style.display = "flex";
-                }
-
-                else{
-                    carHolder.style.display = "none";
-                }
-            }
-
-            if(searchInput.value == "ford" || searchInput.value == "Ford" || searchInput.value == "FORD"){
-                if(carHolder.classList.contains("blue-ranger")){
-                    carHolder.style.display = "flex";
-                }
-
-                else{
-                    carHolder.style.display = "none";
-                }
-            }
-
-            
-        })
+        
     }
 
 }
