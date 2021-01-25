@@ -42,7 +42,7 @@ function findSearched(e) {
             const carNameParent = carName.parentElement;
             const carNameGrandParent = carNameParent.parentElement;
 
-            if (carName.innerText.includes(searchInput.value)) {
+            if (carName.innerText.toLowerCase().includes(searchInput.value.toLowerCase())) {
 
                 carNameGrandParent.style.display = "flex";
                 errorText.style.display = "none";
