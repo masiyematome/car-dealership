@@ -59,6 +59,7 @@ header .search-bar{
     border-left: 1px solid var(--first-color);
     cursor: pointer;
     transition : all ease 0.5s;
+    width : 10%;
 }
 
 .search-bar button:hover{
@@ -367,4 +368,29 @@ footer p{
     bottom: 5%;
     left : 50%;
     transform: translate(-50%,-5%);
+}
+
+/*Media queries*/
+
+@media only screen and (max-width : 1000px){
+    header{
+        flex-direction: column;
+        padding : 10px 35px;
+    }
+
+    .search-bar{
+        padding : 25px 0px 8px;
+    }
+
+    .communication-channels{
+        flex-direction: column;
+    }
+
+    .communication-channels .map{
+        padding : 25px 0px 8px;
+    }
+
+    .communication-channels .contact-links {
+        align-self: center;
+    }
 }
