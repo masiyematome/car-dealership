@@ -40,7 +40,7 @@ header .search-bar{
 .search-bar input,.search-bar button{
     outline : none;
     border : none;
-    padding : 5px 15px;
+    padding : 5px 0px;
 }
 
 .search-bar input{
@@ -59,6 +59,7 @@ header .search-bar{
     cursor: pointer;
     transition : all ease 0.5s;
     width : 10%;
+    text-align:center;
 }
 
 .search-bar button:hover{
@@ -97,7 +98,7 @@ main #intro-text::after{
 }
 
 .buttons-container{
-    width :100%;
+    width :90%;
     margin : auto;
     display : flex;
     justify-content: space-evenly;
@@ -357,14 +358,97 @@ footer p{
 
 .map iframe{
     width : 100%;
-    /* height : 100%; */
     border-radius : 8px;
 }
 
 /*Media queries*/
 
+@media  only screen and (min-width: 768px){
 
+    header{
+        display : flex;
+        justify-content: space-between;
+    }
 
-  
+    header .search-bar{
+        padding : 5px;
+        flex : 0.8;
+    }
 
+    .buttons-container{
+        width : 60%;
+    }
 
+    .full-image-container{
+        width : 80%;
+        height : 70%;
+    }
+
+    .map{
+        padding : 15px 45px;
+    }
+
+    .map iframe{
+        height : 400px;
+    }
+}
+
+@media only screen and (min-width : 990px){
+
+    header .search-bar{
+        flex : 0.6;
+    }
+
+    .buttons-container {
+        width : 50%;
+    }
+
+    .cars-display{
+        display : grid;
+        grid-gap : 15px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,300px);
+        padding : 25px 35px;
+    }
+
+    .car-holder img{
+        height : 60%;
+    }
+
+    .communication-channels{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .communication-channels .contact-links{
+        align-self: flex-start;
+    }
+
+    .map{
+        flex-basis: 70%;
+    }
+
+    .full-image-container{
+        width : 70%;
+        height : 80%;
+    }
+
+}
+
+@media only screen and (min-width : 1200px){
+    header .search-bar{
+        flex : 0.5;
+    }
+
+    .buttons-container{
+        width : 40%;
+    }
+
+    .car-holder img{
+        height : 70%;
+    }
+
+    .full-image-container{
+        width : 60%;
+    }
+}
