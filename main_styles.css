@@ -242,15 +242,13 @@ main #intro-text::after{
     border-radius : 8px;
     opacity : 0;
     pointer-events: none;
-    width : 50%;
     position: absolute;
     top : 50%;
     left : 50%;
-    width : 50%;
-    height : 76%;
+    width : 90%;
+    height : 60%;
     transform: translate(-50%,-50%) scale(0.5);
     transition: all 0.5s ease;
-    /* overflow: hidden; */
 }
 
 .full-image-container .fas{
@@ -286,7 +284,7 @@ main #intro-text::after{
 
 .modal p{
     color : white;
-    font-size : 1.2rem;
+    font-size : 0.9rem;
     position : absolute;
     bottom: 5%;
     left : 50%;
