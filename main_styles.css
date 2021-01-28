@@ -407,12 +407,13 @@ footer p{
         display : grid;
         grid-gap : 15px;
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(5,300px);
-        padding : 25px 35px;
+        grid-template-rows: repeat(5,1fr);
+        padding : 25px 80px;
     }
 
     .car-holder img{
-        height : 60%;
+        width : 45%;
+        height : 70%;
     }
 
     .communication-channels{
@@ -433,6 +434,10 @@ footer p{
         height : 80%;
     }
 
+    footer {
+        padding : 20px 80px 0px;
+    }
+
 }
 
 @media only screen and (min-width : 1200px){
@@ -442,10 +447,6 @@ footer p{
 
     .buttons-container{
         width : 40%;
-    }
-
-    .car-holder img{
-        height : 70%;
     }
 
     .full-image-container{
