@@ -375,6 +375,16 @@ footer .footer-band{
 
 /*Media queries*/
 
+@media only screen and (max-width : 600px){
+    .buttons-container{
+        width : 95%;
+    }
+    
+    .buttons-container button{
+        font-size :0.7rem;
+    }
+}
+
 @media  only screen and (min-width: 768px){
 
     header{
