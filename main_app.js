@@ -29,6 +29,20 @@ searchButton.addEventListener("click", findSearched);
 
 /*A function that finds a searched item*/
 
+buttonsContainer.addEventListener("click" , (ev) => {
+    const item = ev.target;
+    const buttonClass = item.className;
+
+    Array.from(item.parentElement.children).forEach(filterButton => {
+        filterButton.classList.remove("active");
+    })
+
+    if (item.matches("button")) {
+        item.classList.add("active");
+    }
+
+});
+
 function findSearched(e) {
 
     if (searchInput.value == "") {
@@ -91,13 +105,6 @@ function findSearched(e) {
 function showCars(ev) {
 
     const clickedButton = ev.target;
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            buttons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-        })
-    })
 
     carHolders.forEach(function (holder) {
 
