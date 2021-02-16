@@ -27,7 +27,7 @@ searchButton.addEventListener("click", findSearched);
 
 //Functions
 
-/*A function that finds a searched item*/
+/**Highlights the clicked / active button**/
 
 buttonsContainer.addEventListener("click" , (ev) => {
     const item = ev.target;
@@ -42,6 +42,8 @@ buttonsContainer.addEventListener("click" , (ev) => {
     }
 
 });
+
+/*A function that finds a searched item*/
 
 function findSearched(e) {
 
